@@ -1,17 +1,12 @@
 package main.java.ru.stand.alone.application;
 
-import java.io.Console;
 import java.io.IOException;
 
 public class Main
 {
     public static void main (String [] args) throws IOException
     {
-        Console console = System.console();
-        if(console == null)
-        {
-            restartAppWithConsole();
-        }
+        if(System.console() == null) restartAppWithConsole();
         else
         {
             Program program = new Program();
